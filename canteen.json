@@ -1,0 +1,462 @@
+{
+  "info": {
+    "_postman_id": "09a6849c-ad97-4909-9457-4bb9a351df5c",
+    "name": "Lab 5 - Canteen API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58981018",
+    "_collection_link": "https://go.postman.co/collection/58981018-09a6849c-ad97-4909-9457-4bb9a351df5c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01-Read",
+      "item": [
+        {
+          "name": "TC01 - GET /health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8001/health",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC02 - GET /menu-items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC03 - POST /menu-items",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Cơm tấm đặc biệt\",\r\n  \"category\": \"com\",\r\n  \"price\": 45000,\r\n  \"available\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC04 - GET /menu-items/5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Cơm tấm đặc biệt\",\r\n  \"category\": \"com\",\r\n  \"price\": 45000,\r\n  \"available\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC05 - PUT /menu-items/5",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Cơm tấm đặc biệt (Sườn chả)\",\r\n  \"category\": \"com\",\r\n  \"price\": 50000,\r\n  \"available\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC06 - PATCH /menu-items/5",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n  \"price\": 55000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC07 - DELETE /menu-items/5",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n  \"price\": 55000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "02-Create",
+      "item": [
+        {
+          "name": "TC08 - GET /menu-items/5 (Not Found)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n  \"price\": 55000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "03-Update",
+      "item": [
+        {
+          "name": "TC09 - PUT /menu-items/1 Copy",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Cơm tấm đặc biệt\",\r\n  \"category\": \"com\",\r\n  \"price\": 55000,\r\n  \"available\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC10 - PATCH /menu-items/1",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"price\": 60000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC11 - PATCH /menu-items/1",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"available\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "04-Delete",
+      "item": [
+        {
+          "name": "TC12 - DELETE /menu-items/1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"available\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC13 - GET /menu-items/1 (Not Found)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"available\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "05-Data-driven DD",
+      "item": [
+        {
+          "name": "DD - POST /menu-items",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{name}}\",\n  \"category\": \"{{category}}\",\n  \"price\": \"{{price}}\",\n  \"available\": \"{{available}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8001/menu-items",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8001",
+              "path": [
+                "menu-items"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
